@@ -1,0 +1,86 @@
+﻿/* Thiết lập font chữ cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Thiết lập màu cho các phần tử trong bảng giỏ hàng */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Thiết lập màu nền cho phần tiêu đề */
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+}
+
+/* Thiết lập giao diện cho form nhập liệu */
+form {
+    margin: 16px 0;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 16px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Thiết lập giao diện cho nút thêm sản phẩm */
+button[type="button"] {
+    background-color: #008CBA;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button[type="button"]:hover {
+        background-color: #00688B;
+    }
+
+    /* Thiết lập giao diện cho nút xóa giỏ hàng */
+    button[type="button"].clear {
+        background-color: #f44336;
+    }
+
+        button[type="button"].clear:hover {
+            background-color: #d32f2f;
+        }
+
+/* Thiết lập giao diện cho phần tổng tiền */
+tfoot td#total {
+    font-weight: bold;
+}
+
+/* Thiết lập hiệu ứng hover cho các hàng trong bảng giỏ hàng */
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Thiết lập hiệu ứng động cho phần tổng tiền */
+tfoot td#total {
+    transition: background-color 0.5s ease;
+}
+
+    tfoot td#total:hover {
+        background-color: #ddd;
+    }

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <link rel="stylesheet" href="~/images/css1.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @{ var user = Session["User"] as DoAn_Nhom3.Models.KhachHang;}
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <!span class="navbar-toggler-icon"><!/span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between ">
+                <ul class="navbar-nav flex-grow-1 ">
+
+                    @{ if (user == null)
+                        {
+                            <li><img src="~/images/logo.png" style="width:80px;height:50px" /></li>
+                            <li class="nav-link">@Html.ActionLink("N3Shop", "Trangchu", "TrangChus", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Trang Chủ", "Trangchu", "TrangChus", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Thông Tin ", "ThongTin", "TT", null, new { style = "text-decoration:none;" })</li>
+                            //<li>@Html.ActionLink("Trang Chủ", "BanHang", "KhachHangz", new { area = "" }, new { @class = "nav-link" }))</li>
+                            //<li>@Html.ActionLink("Đăng Ký", "Create", "KhachHangz", new { area = "" }, new { @class = "nav-link" })</li>
+                            <div class="menu-wrapper menu-gold" style="margin-left:-5px;margin-top:-22px">
+                                <ul class="menu">
+                                    <li>
+                                        <a href=""> @Html.ActionLink("Sản Phẩm", "SanPham", "SanPham", null, new { style = "text-decoration:none;" })</a>
+                                        <ul>
+                                            <li><a href=""> @Html.ActionLink("Bàn", "ban", "Ban", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Ghế", "ghe", "Ghe", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Sofa", "sofa", "Sofa", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Giường", "giuong", "Giuong", null, new { style = "text-decoration:none;" })</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px;margin-right:10px">
+                                <input type="text" placeholder="Search.." name="search2">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                            <button style="height:30px;margin-top:16px">
+                               
+
+                                @Html.ActionLink("Giỏ Hàng", "ShowToCart", "ShoppingCart", null, new { style = "text-decoration:none;" })
+                                @Html.Action("BagCart", "ShoppingCart")
+                            
+                            <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            //<li>@Html.ActionLink("Đăng Nhập", "DangNhap", "KhachHangz", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li style="margin-left:;margin-top:19px">@Html.ActionLink("Đăng Nhập", "DangNhap", "KhachHangz", null, new { style = "text-decoration:none;" })</li>
+
+                        }
+                    }
+                    @{ if (user != null)
+                        {
+                            <li><img src="~/images/logo.png" style="width:80px;height:50px" /></li>
+                            <li class="nav-link">@Html.ActionLink("N3Shop", "Trangchu", "TrangChus", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Trang Chủ", "Trangchu", "TrangChus", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Thông Tin ", "ThongTin", "TT", null, new { style = "text-decoration:none;" })</li>
+                            //<li>@Html.ActionLink("Trang Chủ", "BanHang", "KhachHangz", new { area = "" }, new { @class = "nav-link" }))</li>
+                            //<li>@Html.ActionLink("Đăng Ký", "Create", "KhachHangz", new { area = "" }, new { @class = "nav-link" })</li>
+                            <div class="menu-wrapper menu-gold" style="margin-left:-5px;margin-top:-22px">
+                                <ul class="menu">
+                                    <li>
+                                        <a href=""> @Html.ActionLink("Sản Phẩm", "ShowToCart", "GioHangC", null, new { style = "text-decoration:none;" })</a>
+                                        <ul>
+                                            <li><a href=""> @Html.ActionLink("Bàn", "ban", "Ban", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Ghế", "ghe", "Ghe", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Sofa", "sofa", "Sofa", null, new { style = "text-decoration:none;" })</a></li>
+                                            <li><a href=""> @Html.ActionLink("Giường", "giuong", "Giuong", null, new { style = "text-decoration:none;" })</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px;margin-right:10px">
+                                <input type="text" placeholder="Search.." name="search2">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                            <button style="height:30px;margin-top:16px">
+                                @Html.ActionLink("Giỏ Hàng", "ShowToCart", "ShoppingCart", null, new { style = "text-decoration:none;" })
+                                @Html.Action("BagCart", "ShoppingCart")
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                            <li><a style="text-decoration: none;color:ghostwhite" href="#">Xin Chào:@user.HoTenKH</a></li>
+                            <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "KhachHangz", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                    }
+
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+                    <div class="container body-content">
+                        @RenderBody()
+                        <hr />
+                        <footer>
+                            <p></p>
+                        </footer>
+                    </div>
+
+                    @Scripts.Render("~/bundles/jquery")
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @RenderSection("scripts", required: false)
+</body>
+</html>

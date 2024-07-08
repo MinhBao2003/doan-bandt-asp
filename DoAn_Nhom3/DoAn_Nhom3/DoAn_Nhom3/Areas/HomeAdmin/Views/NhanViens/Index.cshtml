@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DoAn_Nhom3.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/HomeAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { style = "text-decoration:none;" })
+    <li class="nav-link">@Html.ActionLink("Trở về AdminUpdate", "AdminUpdate", "AdmisUpdate", null, new { style = "text-decoration:none;" })</li>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quyen.Quyen_Ten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTenNV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaiKhoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quyen.Quyen_Ten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTenNV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaiKhoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatKhau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_NhanVien }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_NhanVien }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_NhanVien })
+        </td>
+    </tr>
+}
+
+</table>

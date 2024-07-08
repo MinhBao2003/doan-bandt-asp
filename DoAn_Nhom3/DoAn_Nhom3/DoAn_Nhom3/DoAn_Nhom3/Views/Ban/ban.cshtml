@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "ban";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/site2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/1.jpg" class="d-block w-100" alt="p1" style="align:center;width: 640px;height: 350px;text-align: center;" asp-append-version="true">
+        </div>
+        <div class="carousel-item">
+            <a href=""><img src="~/images/2.jpg" class="d-block w-100" alt="p2" style="align:center;width: 350px;height: 350px;text-align: center;" asp-append-version="true"></a>
+        </div>
+        <div class="carousel-item">
+            <a href=""><img src="~/images/3.jpg" class="d-block w-100" alt="p3" style="align:center;width: 350px;height: 350px;text-align: center;" asp-append-version="true"></a>
+        </div>
+    </div>
+    <center><div style="font-size: 40px;color: ;">SẢN PHẨM BÀN</div></center>
+    <br>
+    <div style="width:100%;height:3px;background-color:yellow"></div>
+    <br />
+   
+
+    <center>
+        <div class="container" width="100%" padding="0 1em">
+            <div class="row">
+                <div class="col">
+                    <div class="card" width="20rem">
+                        <img src="~/images/ProductImg/table1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bàn nước Elegance</h5>
+                            <p class="card-text" align="center">5,680,000 VND</p>
+                            <button>@Html.ActionLink("Xem Chi Tiết Hàng", "Ban1", "Ban", null, new { style = "text-decoration:none;" })</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" width="20rem">
+                        <img src="~/images/ProductImg/table2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bàn nước Pop</h5>
+                            <p class="card-text" align="center">5,695,000 VND</p>
+                            <button>@Html.ActionLink("Xem Chi Tiết Hàng", "Ban2", "Ban", null, new { style = "text-decoration:none;" })</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" width="20rem">
+                        <img src="~/images/ProductImg/table3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bàn nước Osaka</h5>
+                            <p class="card-text" align="center">5,270,000 VND</p>
+                            <button>@Html.ActionLink("Xem Chi Tiết Hàng", "Ban3", "Ban", null, new { style = "text-decoration:none;" })</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" width="20rem">
+                        <img src="~/images/ProductImg/table4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bàn nước Around</h5>
+                            <p class="card-text" align="center">9,680,000 VND</p>
+                            <button>@Html.ActionLink("Xem Chi Tiết Hàng", "Ban4", "Ban", null, new { style = "text-decoration:none;" })</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    <br>
+
+   
+    <br>
+
+
+    <div style="width: 100%; min-height: 30em; margin: auto; background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url(../images/room.jpg) " align="center">
+        <br><br>
+        <h1 style="font-size: 50px"><b>KHÔNG GIAN PHÒNG KHÁCH MỚI</b></h1>
+        <br><br><br><br><br><br><br><br><br>
+        <input type="submit" value="XEM CHI TIẾT" style="border-color: white;background-color: white;color: black;width: 10%;height: 40px;vertical-align: center">
+    </div>
+    <br>
+    <br>
+    <div style="width: 100%; min-height: 30em; margin: auto; background-size: cover; background-repeat: no-repeat; background-position: center;background-image:url(../images/room2.jpg)" align="center">
+        <br><br>
+        <h1 style="font-size: 50px"><b>KHÔNG GIAN PHÒNG NGỦ</b></h1><br><br><br><br><br><br><br><br><br>
+        <input type="submit" value="XEM CHI TIẾT" style="border-color: white;background-color: white;color: black;width: 10%;height: 40px;vertical-align: center">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!div style="background-color:aqua;width:1514px;margin-left:-113px"> <p></p></!div>
+    <section class="info_section layout_padding2">
+        <div class="container" style="background-color:black">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="info_contact">
+                        <h4>
+                            Contact
+                        </h4>
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/telephone-symbol-button.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    +01 123567894
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/email.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    demo@gmail
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info_menu">
+                        <h4>
+                            Menu
+                        </h4>
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html"> About </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buy.html"> Online Buy </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info_news">
+                        <h4>
+                            newsletter
+                        </h4>
+                        <form action="">
+                            <input type="text" placeholder="Enter Your email">
+                            <div class="d-flex justify-content-center justify-content-end mt-3">
+                                <button>
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end info section -->
+    <!------------------FOOTER-------------------->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+    </script>
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [],
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(".owl-2").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [],
+            autoplay: true,
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+

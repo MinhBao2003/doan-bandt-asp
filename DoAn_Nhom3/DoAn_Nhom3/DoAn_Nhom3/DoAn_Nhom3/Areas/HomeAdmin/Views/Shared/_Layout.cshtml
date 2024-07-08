@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @{ var user = Session["User"] as DoAn_Nhom3.Models.Admin;}
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 ">
+                    <li>@Html.ActionLink("Trang Chủ", "BanHang", "Trangchu", new { area = "" }, new { @class = "nav-link" })</li>
+                    @{ if (user == null)
+                        {
+                            //<li>@Html.ActionLink("Đăng Ký", "DangKy", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            //<li>@Html.ActionLink("Đăng Nhập", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Đăng Nhập ", "DangNhapAdmin", "Admins", null, new { style = "text-decoration:none;" })</li>
+
+                        }
+                    }
+                    @{ if (user != null)
+                        {
+                            /*<li><a style="text-decoration: none;color:ghostwhite" href="#">Xin Chào:@user.HoTenAD</a></li>
+                            <li>@Html.ActionLink("Đăng Xuất", "DangXuat", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Admin", "Index", "Admins", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Nhân Viên", "Index", "KhachHangs", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Khách Hàng", "Index", "NhanViens", new { area = "" }, new { @class = "nav-link" })</li>*/
+                            <li class="nav-link">@Html.ActionLink("Admin", "Index", "Admins", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Nhân Viên", "Index", "KhachHangs", null, new { style = "text-decoration:none;" })</li>
+                            <li class="nav-link">@Html.ActionLink("Khách Hàng", "Index", "NhanViens", null, new { style = "text-decoration:none;" })</li>
+                            //<li>@Html.ActionLink("Admin", "Index", "Admins", new { area = "" }, new { @class = "nav-link" })</li>
+                            //<li>@Html.ActionLink("Nhân Viên", "Index", "KhachHangs", new { area = "" }, new { @class = "nav-link" })</li>
+                            //<li>@Html.ActionLink("Khách Hàng", "Index", "NhanViens", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li class="nav-link"><a style="text-decoration: none;color:ghostwhite" href="#">Admin:@user.HoTenAD</a></li>
+                            <li>@Html.ActionLink("Đăng Xuất", "DangXuatAdmin", "Admins", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

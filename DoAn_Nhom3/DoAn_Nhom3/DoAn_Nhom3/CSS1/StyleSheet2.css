@@ -1,0 +1,20 @@
+﻿.hot-product {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    100% {
+        color: red;
+    }
+}

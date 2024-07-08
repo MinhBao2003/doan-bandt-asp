@@ -1,0 +1,87 @@
+﻿@model DoAn_Nhom3.Models.KhachHang
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Trang Đăng Ký</h2>
+<body style="width: 100%; min-height: 30em; margin: auto; background-size: cover; background-repeat: no-repeat; background-position: center;background-image:url(../images/room2.jpg)" align="center">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <!link href="~/Areas/HomeAdmin/Data/css.css" rel="stylesheet" id="bootstrap-css">
+
+        <div class="form-horizontal">
+            <h4>Khách Hàng</h4>
+            <hr />
+            <!div style="width: 100%; min-height: 30em; margin: auto; background-size: cover; background-repeat: no-repeat; background-position: center;background-image:url(../images/room2.jpg)" align="center">
+            <!img src="~/Views/Page/login.jpg" />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <!img src="~/images/wellcome.png" style="height:600px;width:1200px" />
+            <!div style="margin-left:100px;background-color:;width:230px;margin-top:-590px">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id_KhachHang, htmlAttributes: new { @class = "control-label col-md-2", @placeholder = "Vui Lòng Id Khách Hàng", })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Id_KhachHang, new { htmlAttributes = new { @class = "form-control" ,@placeholder = "Vui Lòng Id Khách Hàng", } })
+                    @Html.ValidationMessageFor(model => model.Id_KhachHang, "", new { @class = "text-danger",@placeholder = "Vui Lòng Id Khách Hàng", })
+                </div>
+            </div>
+
+            <div class="form-group input-field">
+                @Html.LabelFor(model => model.HoTenKH, htmlAttributes: new { @class = "control-label col-md-2", @placeholder = "Vui Lòng Nhập Họ Tên Khách Hàng", })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HoTenKH, new { htmlAttributes = new { @class = "form-control", @placeholder = "Vui Lòng Nhập Họ Tên Khách Hàng", } })
+                    @Html.ValidationMessageFor(model => model.HoTenKH, "", new { @class = "text-danger", @placeholder = "Vui Lòng Nhập Họ Tên Khách Hàng", })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TaiKhoan, htmlAttributes: new { @class = "control-label col-md-2", @placeHolder = "Vui lòng Nhập Tài Khoảng" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control", @placeHolder = "Vui lòng Nhập Tài Khoảng" } })
+                    @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger", @placeHolder = "Vui lòng Nhập Tài Khoảng" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MatKhau, htmlAttributes: new { @class = "control-label col-md-2", @placeholder = "Vui Lòng Mật Khẩu", })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", @placeholder = "Vui Lòng Mật Khẩu", } })
+                    @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger", @placeholder = "Vui Lòng Mật Khẩu", })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id_Quyen, "Id_Quyen", htmlAttributes: new { @class = "control-label col-md-2", @placeholder = "Vui Lòng Id Quyền", })
+                <div class="col-md-10">
+                    @Html.DropDownList("Id_Quyen", null, htmlAttributes: new { @class = "form-control", @placeholder = "Vui Lòng Id Quyền", })
+                    @Html.ValidationMessageFor(model => model.Id_Quyen, "", new { @class = "text-danger", @placeholder = "Vui Lòng Id Quyền", })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2", @placeholder = "Vui Lòng Email", })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Vui Lòng Email", } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger", @placeholder = "Vui Lòng Email", })
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" style="background-color:deepskyblue;margin-top:10px" />
+                </div>
+            </div>
+
+            <!/div>
+            <!/div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>

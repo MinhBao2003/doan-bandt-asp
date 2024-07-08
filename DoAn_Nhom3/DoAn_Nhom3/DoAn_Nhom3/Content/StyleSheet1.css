@@ -1,0 +1,38 @@
+﻿/* Căn giữa các hình ảnh */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Định dạng tiêu đề h1 */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Định dạng tiêu đề h2 */
+h2 {
+    margin-top: 30px;
+}
+
+/* Định dạng đoạn văn bản */
+p {
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Định dạng các hình ảnh */
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Định dạng cửa hàng */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}

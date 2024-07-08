@@ -1,0 +1,59 @@
+﻿@model DoAn_Nhom3.Models.ThongTin
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/HomeAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThongTin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.noidung }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

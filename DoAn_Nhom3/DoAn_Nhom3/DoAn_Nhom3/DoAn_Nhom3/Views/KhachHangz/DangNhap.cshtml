@@ -1,0 +1,63 @@
+﻿@model DoAn_Nhom3.Models.KhachHang
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Trang Đăng Nhập</h2>
+
+
+<!link href="~/Areas/HomeAdmin/Data/css.css" rel="stylesheet" id="bootstrap-css">
+@*<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Awesome Login Page</title>
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body style="width: 100%; min-height: 30em; margin: auto; background-size: cover; background-repeat: no-repeat; background-position: center;background-image:url(../images/room2.jpg)" align="center">
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <!div class="d-flex justify-content-center">
+                <!div class="brand_logo_container">
+                <!img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png" class="brand_logo" alt="Logo">
+                <!/div>
+                <!/div>
+                @using (Html.BeginForm("DangNhap", "KhachHangz", FormMethod.Post))
+                {
+                    <br />
+                    if (ViewBag.error != null)
+                    {
+                        <span style="color:red; background-color:yellow; margin-left:50px;">@ViewBag.error</span>
+                    }
+                    <div class="input-field">
+                        <label for="username">Tài Khoản</label>
+                        @Html.TextBoxFor(m => m.TaiKhoan, new { @class = "form-control", @required = "required", @autofocus = "autofocus", @placeHolder = "Vui lòng Nhập Tài Khoảng" })
+
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Mật Khẩu</label>
+                        @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @required = "required", @placeholder = "Vui Lòng Mật Khẩu", })
+
+                    </div>
+                    <br />
+                    <div class="login-btn" style="margin-left:30px">
+                        <button type="submit" class="btn waves-effect waves-light green darken-4" style="background-color:yellow">Login</button>
+                        <button type="submit" class="btn waves-effect waves-light green darken-4" style="background-color:yellow"> @Html.ActionLink("DangKy", "Create", null, new { style = "text-decoration:none;" })</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
