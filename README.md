@@ -1,1 +1,1 @@
-# doan-bandt-asp
+# cài asp.net và spl để chạy
